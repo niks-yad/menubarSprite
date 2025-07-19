@@ -3,7 +3,7 @@
 🎮 An animated Pokemon sprite that lives in your macOS menu bar and responds to mouse movement!
 
 ### ⬇️ Download
-[Download MenuBarSprite-v1.0.0.zip](https://github.com/niks-yad/menubarSprite/blob/main/MenuBarSprite.zip)
+[Download MenuBarSprite.zip](https://github.com/niks-yad/menubarSprite/blob/main/MenuBarSprite.zip)
 
 
 ### 📦 Installation Instructions
