@@ -2,6 +2,15 @@
 
 A fun macOS menu bar app that displays an animated sprite character that follows your mouse movements in real-time! 🎮
 
+## Features
+
+- **Responsive Animation**: Sprite walks in the direction you move your mouse
+- **4-Directional Movement**: Up, down, left, and right animations
+- **Memory**: Sprite remembers and faces the last direction it moved
+- **Enlarged View**: Click the menu bar sprite to see a larger version that mirrors the movement
+- **Menu Bar Only**: Clean, lightweight app that lives only in your menu bar
+- **No Dock Icon**: Doesn't clutter your dock
+
 ## Requirements
 
 - macOS 10.15 (Catalina) or later
@@ -15,13 +24,19 @@ A fun macOS menu bar app that displays an animated sprite character that follows
 3. Launch the app and grant accessibility permissions when prompted
 
 ### Option 2: Build from Source
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/menubar-sprite-follower.git
-   cd menubar-sprite-follower
-   ```
+1. **Create New Xcode Project**:
+   - Open Xcode and create a new project
+   - Choose **macOS** → **App**
+   - Product Name: "MenuBarSpriteFollower" (or your preferred name)
+   - Interface: **Storyboard**
+   - Language: **Swift**
+   - Use Core Data: **Unchecked**
 
-2. **Prepare Your Sprite Sheet** (or use the included one):
+2. **Replace AppDelegate.swift**:
+   - Delete the default `AppDelegate.swift` content
+   - Copy and paste the complete code from this repository's `AppDelegate.swift`
+
+3. **Prepare Your Sprite Sheet** (or use the included one):
    - Create a 16-frame sprite sheet in PNG format
    - Arrange frames in a 4x4 grid layout:
      - Row 1: Down movement frames (0-3)
@@ -29,15 +44,12 @@ A fun macOS menu bar app that displays an animated sprite character that follows
      - Row 3: Right movement frames (8-11)
      - Row 4: Up movement frames (12-15)
    - Name the file `sprite_sheet.png`
-
-3. **Open in Xcode**:
-   - Open `MenuBarSpriteFollower.xcodeproj` in Xcode
-   - Add your `sprite_sheet.png` to the project (drag and drop into Xcode)
-   - Make sure "Add to target" is checked
+   - Drag it into your Xcode project (make sure "Add to target" is checked)
 
 4. **Configure Info.plist** (Optional - for hiding dock icon):
-   - In project settings, go to Info tab
-   - Add new row: `LSUIElement` → Boolean → YES
+   - Click your project name in the left sidebar
+   - Select your app target → **Info** tab
+   - Add new row: `LSUIElement` → Boolean → **YES**
 
 5. **Build and Run**:
    - Press Cmd+R to build and run
@@ -115,7 +127,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by classic 2D game sprites and desktop pets
 - Built with love for the macOS community
-- The included sprite is a pokemon character and I dont own it. [Source](https://i.sstatic.net/gZ3c5.png)
+- The included sprite is a Pokemon character and I don't own it. [Source](https://i.sstatic.net/gZ3c5.png)
 
 ## Support
 
