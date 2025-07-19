@@ -1,142 +1,37 @@
-# MenuBar Sprite Follower
+## MenuBar Sprite Follower v1.0.0
 
-A fun macOS menu bar app that displays an animated sprite character that follows your mouse movements in real-time! 🎮
+🎮 An animated Pokemon sprite that lives in your macOS menu bar and responds to mouse movement!
 
-## Features
+### ⬇️ Download
+[Download MenuBarSprite-v1.0.0.zip]()
 
-- **Responsive Animation**: Sprite walks in the direction you move your mouse
-- **4-Directional Movement**: Up, down, left, and right animations
-- **Memory**: Sprite remembers and faces the last direction it moved
-- **Enlarged View**: Click the menu bar sprite to see a larger version that mirrors the movement
-- **Menu Bar Only**: Clean, lightweight app that lives only in your menu bar
-- **No Dock Icon**: Doesn't clutter your dock
+### 📦 Installation Instructions
 
-## Requirements
+**Important**: This app is unsigned, so macOS will show a security warning. This is normal for free indie apps!
 
+1. **Download** the ZIP file above
+2. **Extract** MenuBarSprite.app 
+3. **Drag** MenuBarSprite.app to your Applications folder
+4. **Right-click** the app and select **"Open"** (don't double-click!)
+5. **Click "Open"** when macOS asks "Are you sure you want to open it?"
+6. **Grant accessibility permissions** when prompted
+7. **Enjoy your animated menu bar companion!** 
+
+The security warning only appears the first time. After that, the app launches normally.
+
+### ✨ Features
+- Animated walking in 4 directions based on mouse movement
+- Click the sprite to see an enlarged view
+- Remembers the last direction it faced
+- Works globally across all apps
+
+### 🔧 Requirements
 - macOS 10.15 (Catalina) or later
-- Xcode 12.0 or later (for building from source)
+- Accessibility permissions (granted during first run)
 
-## Installation
+### ❓ Troubleshooting
+**"App can't be opened because it's from an unidentified developer"**
+- Solution: Right-click → Open (instead of double-clicking)
 
-### Option 1: Download Release (Coming Soon)
-1. Download the latest release from the [Releases](https://github.com/yourusername/menubar-sprite-follower/releases) page
-2. Unzip and drag the app to your Applications folder
-3. Launch the app and grant accessibility permissions when prompted
-
-### Option 2: Build from Source
-1. **Create New Xcode Project**:
-   - Open Xcode and create a new project
-   - Choose **macOS** → **App**
-   - Product Name: "MenuBarSpriteFollower" (or your preferred name)
-   - Interface: **Storyboard**
-   - Language: **Swift**
-   - Use Core Data: **Unchecked**
-
-2. **Replace AppDelegate.swift**:
-   - Delete the default `AppDelegate.swift` content
-   - Copy and paste the complete code from this repository's `AppDelegate.swift`
-
-3. **Prepare Your Sprite Sheet** (or use the included one):
-   - Create a 16-frame sprite sheet in PNG format
-   - Arrange frames in a 4x4 grid layout:
-     - Row 1: Down movement frames (0-3)
-     - Row 2: Left movement frames (4-7)
-     - Row 3: Right movement frames (8-11)
-     - Row 4: Up movement frames (12-15)
-   - Name the file `sprite_sheet.png`
-   - Drag it into your Xcode project (make sure "Add to target" is checked)
-
-4. **Configure Info.plist** (Optional - for hiding dock icon):
-   - Click your project name in the left sidebar
-   - Select your app target → **Info** tab
-   - Add new row: `LSUIElement` → Boolean → **YES**
-
-5. **Build and Run**:
-   - Press Cmd+R to build and run
-   - Grant accessibility permissions when prompted
-
-## Usage
-
-1. **Basic Movement**: Move your mouse around the screen and watch the sprite follow!
-
-2. **Enlarged View**: Left-click the menu bar sprite to open a larger window showing the same animation
-
-3. **Menu Options**: Right-click the sprite for additional options including quit
-
-4. **Permissions**: The app needs accessibility permissions to track global mouse movement - you'll be prompted on first run
-
-## Sprite Sheet Format
-
-Your sprite sheet should be a PNG file arranged in a 4x4 grid (16 frames total):
-
-```
-[Down1] [Down2] [Down3] [Down4]
-[Left1] [Left2] [Left3] [Left4]
-[Right1][Right2][Right3][Right4]
-[Up1]   [Up2]   [Up3]   [Up4]
-```
-
-Each frame will be automatically extracted and resized for the menu bar.
-
-## Customization
-
-You can easily customize the app by modifying these values in `AppDelegate.swift`:
-
-- **Sprite size**: Change the `NSSize(width: 32, height: 32)` values
-- **Animation speed**: Adjust `withTimeInterval: 0.15` for frame rate
-- **Mouse sensitivity**: Modify `threshold: CGFloat = 10.0` for movement detection
-- **Animation duration**: Change the `0.6` second delay in `animateInDirection`
-
-## Technical Details
-
-- **Language**: Swift 5
-- **Framework**: Cocoa
-- **Architecture**: Event-driven with timer-based mouse tracking
-- **Memory**: Lightweight - all sprites loaded once at startup
-- **Performance**: Minimal CPU usage, only processes mouse movement every 0.1 seconds
-
-## Troubleshooting
-
-**Sprite doesn't appear or shows default icon**:
-- Ensure `sprite_sheet.png` is properly added to your Xcode project
-- Check the console for error messages about loading the sprite sheet
-
-**Sprite doesn't respond to mouse movement**:
+**Sprite doesn't respond to mouse movement**
 - Grant accessibility permissions in System Preferences → Security & Privacy → Privacy → Accessibility
-- Try restarting the app after granting permissions
-
-**Animation is too fast/slow**:
-- Adjust the `withTimeInterval` value in `startDirectionalAnimation()`
-- Modify the delay in `animateInDirection()` for longer/shorter animations
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. Some ideas for improvements:
-
-- [ ] Support for different sprite sheet layouts
-- [ ] Configurable animation speeds via preferences
-- [ ] Multiple sprite character options
-- [ ] Sound effects
-- [ ] Keyboard shortcuts for manual control
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Inspired by classic 2D game sprites and desktop pets
-- Built with love for the macOS community
-- The included sprite is a Pokemon character and I don't own it. [Source](https://i.sstatic.net/gZ3c5.png)
-
-## Support
-
-If you enjoy this app, consider:
-- ⭐ Starring this repository
-- 🐛 Reporting bugs in the Issues section
-- 💡 Suggesting new features
-- 🔄 Sharing with friends who love animated desktop companions!
-
----
-
-Made with ❤️ for Mac users who miss the days of desktop pets and interactive screen companions.
