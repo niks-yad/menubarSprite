@@ -5,6 +5,7 @@
 ### ⬇️ Download
 [Download MenuBarSprite-v1.0.0.zip](https://github.com/niks-yad/menubarSprite/blob/main/MenuBarSprite.zip)
 
+
 ### 📦 Installation Instructions
 
 **Important**: This app is unsigned, so macOS will show a security warning. This is normal for free indie apps!
