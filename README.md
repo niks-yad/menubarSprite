@@ -2,17 +2,6 @@
 
 A fun macOS menu bar app that displays an animated sprite character that follows your mouse movements in real-time! 🎮
 
-![Demo](demo.gif) <!-- Add a GIF demo when you have one -->
-
-## Features
-
-- **Responsive Animation**: Sprite walks in the direction you move your mouse
-- **4-Directional Movement**: Up, down, left, and right animations
-- **Memory**: Sprite remembers and faces the last direction it moved
-- **Enlarged View**: Click the menu bar sprite to see a larger version that mirrors the movement
-- **Menu Bar Only**: Clean, lightweight app that lives only in your menu bar
-- **No Dock Icon**: Doesn't clutter your dock
-
 ## Requirements
 
 - macOS 10.15 (Catalina) or later
@@ -32,7 +21,7 @@ A fun macOS menu bar app that displays an animated sprite character that follows
    cd menubar-sprite-follower
    ```
 
-2. **Prepare Your Sprite Sheet**:
+2. **Prepare Your Sprite Sheet** (or use the included one):
    - Create a 16-frame sprite sheet in PNG format
    - Arrange frames in a 4x4 grid layout:
      - Row 1: Down movement frames (0-3)
@@ -126,6 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by classic 2D game sprites and desktop pets
 - Built with love for the macOS community
+- The included sprite is a pokemon character and I dont own it. [Source](https://i.sstatic.net/gZ3c5.png)
 
 ## Support
 
